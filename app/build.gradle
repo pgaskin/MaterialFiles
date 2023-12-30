@@ -7,8 +7,6 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-parcelize'
 
-apply from: '../signing.gradle'
-
 //#ifdef NONFREE
 buildscript {
     repositories {
@@ -72,7 +70,6 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
 //#ifdef NONFREE
             firebaseCrashlytics {
                 nativeSymbolUploadEnabled true
