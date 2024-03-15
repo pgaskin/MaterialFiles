@@ -23,14 +23,11 @@ import me.zhanghai.android.files.provider.remote.IRemoteFileService
 import me.zhanghai.android.files.provider.remote.RemoteFileServiceInterface
 import me.zhanghai.android.files.provider.remote.RemoteFileSystemException
 import rikka.shizuku.Shizuku
-import rikka.sui.Sui
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 
 object SuiFileServiceLauncher {
     private val lock = Any()
-
-    private var isSuiIntialized = false
 
     @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.M)
     fun isSuiAvailable(): Boolean {
@@ -38,11 +35,7 @@ object SuiFileServiceLauncher {
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
                 return false
             }
-            if (!isSuiIntialized) {
-                Sui.init(application.packageName)
-                isSuiIntialized = true
-            }
-            return Sui.isSui()
+            return true;
         }
     }
 
