@@ -13,11 +13,11 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
           cache: gradle
-      - run: ./gradlew app:assembleRelease
+      - run: ./gradlew app:assembleDebug
       - uses: actions/upload-artifact@v3
         with:
-          name: app-release-unsigned
-          path: app/build/outputs/apk/release/app-release-unsigned.apk
+          name: app-debug-unsigned
+          path: app/build/outputs/apk/debug/app-debug.apk
   release:
     name: Sign
     runs-on: ubuntu-latest
@@ -27,20 +27,20 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: app-release-unsigned
+          name: app-debug-unsigned
       - name: Write keystore
         run: echo "$KEYSTORE_BASE64" | base64 --decode > "$KEYSTORE_PATH"
         env:
           KEYSTORE_PATH: ${{ github.workspace }}/keystore.jks
           KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
       - name: Sign APK
-        run: $ANDROID_HOME/build-tools/33.0.0/apksigner sign --ks "$KEYSTORE_PATH" --ks-pass env:KEYSTORE_PASSWORD --in app-release-unsigned.apk --out app-release.apk
+        run: $ANDROID_HOME/build-tools/33.0.0/apksigner sign --ks "$KEYSTORE_PATH" --ks-pass env:KEYSTORE_PASSWORD --in app-debug.apk --out app-debug-signed.apk
         env:
           KEYSTORE_PATH: ${{ github.workspace }}/keystore.jks
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
       - name: Verify APK signature
-        run: $ANDROID_HOME/build-tools/33.0.0/apksigner verify --print-certs app-release.apk
+        run: $ANDROID_HOME/build-tools/33.0.0/apksigner verify --print-certs app-debug-signed.apk
       - uses: actions/upload-artifact@v3
         with:
-          name: app-release
-          path: app-release.apk
+          name: app-debug-signed
+          path: app-debug-signed.apk
