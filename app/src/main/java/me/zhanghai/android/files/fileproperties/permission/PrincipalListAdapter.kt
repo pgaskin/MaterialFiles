@@ -3,15 +3,13 @@
  * All Rights Reserved.
  */
 
-package me.zhanghai.android.files.fileproperties.permissions
+package me.zhanghai.android.files.fileproperties.permission
 
 import android.view.ViewGroup
 import androidx.annotation.DrawableRes
 import androidx.recyclerview.widget.RecyclerView
-import coil.clear
 import coil.dispose
 import coil.load
-import coil.loadAny
 import me.zhanghai.android.files.R
 import me.zhanghai.android.files.coil.ignoreError
 import me.zhanghai.android.files.compat.getDrawableCompat
@@ -58,14 +56,14 @@ abstract class PrincipalListAdapter(
         }
         binding.principalText.text = if (principal.name != null) {
             binding.principalText.context.getString(
-                R.string.file_properties_permissions_principal_format, principal.name, principal.id
+                R.string.file_properties_permission_principal_format, principal.name, principal.id
             )
         } else {
             principal.id.toString()
         }
         binding.labelText.text = principal.applicationLabels.firstOrNull()
             ?: binding.labelText.resources.getString(
-                R.string.file_properties_permissions_set_principal_system
+                R.string.file_properties_permission_set_principal_system
             )
     }
 

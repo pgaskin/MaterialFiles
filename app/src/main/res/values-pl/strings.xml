@@ -310,13 +310,13 @@
     <string name="file_create_directory_title">Nowy katalog</string>
 
     <string name="file_list_title">Pliki</string>
-    <plurals name="file_list_title_pick_file">
+    <plurals name="file_list_title_open_file">
         <item quantity="one">Wybierz plik</item>
         <item quantity="few">Wybierz pliki</item>
         <item quantity="many">Wybierz pliki</item>
         <item quantity="other">Wybierz pliki</item>
     </plurals>
-    <plurals name="file_list_title_pick_directory">
+    <plurals name="file_list_title_open_directory">
         <item quantity="one">Wybierz katalog</item>
         <item quantity="few">Wybierz katalogi</item>
         <item quantity="many">Wybierz katalogi</item>
@@ -357,7 +357,7 @@
     <string name="file_list_action_create_shortcut">Utwórz skrót</string>
     <string name="file_list_breadcrumb_action_open_in_new_task">Otwórz w nowym oknie</string>
     <string name="file_list_select_title_format">%1$,d</string>
-    <string name="file_list_select_current_directory_format">Wybierz „%1$s”</string>
+    <string name="file_list_open_current_directory_format">Wybierz „%1$s”</string>
     <string name="file_list_paste_move_title_format">Przenoszenie %1$,d</string>
     <string name="file_list_paste_copy_title_format">Kopiowanie %1$,d</string>
     <string name="file_list_paste_extract_title_format">Rozpakowywanie %1$,d</string>
@@ -393,39 +393,39 @@
     <string name="file_properties_basic_archive_file">Zarchiwizuj plik</string>
     <string name="file_properties_basic_archive_entry">Wpis archiwum</string>
     <string name="file_properties_basic_free_space">Wolna przestrzeń</string>
-    <string name="file_properties_permissions">Uprawnienia</string>
-    <string name="file_properties_permissions_owner">Właściciel</string>
-    <string name="file_properties_permissions_group">Grupa</string>
-    <string name="file_properties_permissions_principal_format">%1$s (%2$d)</string>
-    <string name="file_properties_permissions_set_owner_title">Zmień właściciela</string>
-    <string name="file_properties_permissions_set_group_title">Zmień grupę</string>
-    <string name="file_properties_permissions_set_principal_filter_hint">Wprowadź nazwę lub ID</string>
-    <string name="file_properties_permissions_set_principal_system">System</string>
-    <string name="file_properties_permissions_mode">Atrybut</string>
-    <string name="file_properties_permissions_mode_format">%1$s (%2$04o)</string>
-    <string name="file_properties_permissions_set_mode_title">Zmiana atrybutu</string>
-    <string name="file_properties_permissions_set_mode_others">Inni</string>
-    <string-array name="file_properties_permissions_set_mode_normal_mode_bits_file">
+    <string name="file_properties_permission">Uprawnienia</string>
+    <string name="file_properties_permission_owner">Właściciel</string>
+    <string name="file_properties_permission_group">Grupa</string>
+    <string name="file_properties_permission_principal_format">%1$s (%2$d)</string>
+    <string name="file_properties_permission_set_owner_title">Zmień właściciela</string>
+    <string name="file_properties_permission_set_group_title">Zmień grupę</string>
+    <string name="file_properties_permission_set_principal_filter_hint">Wprowadź nazwę lub ID</string>
+    <string name="file_properties_permission_set_principal_system">System</string>
+    <string name="file_properties_permission_mode">Atrybut</string>
+    <string name="file_properties_permission_mode_format">%1$s (%2$04o)</string>
+    <string name="file_properties_permission_set_mode_title">Zmiana atrybutu</string>
+    <string name="file_properties_permission_set_mode_others">Inni</string>
+    <string-array name="file_properties_permission_set_mode_normal_mode_bits_file">
         <item>Odczyt</item>
         <item>Zapis</item>
         <item>Wykonanie</item>
     </string-array>
-    <string-array name="file_properties_permissions_set_mode_normal_mode_bits_directory">
+    <string-array name="file_properties_permission_set_mode_normal_mode_bits_directory">
         <item>Odczyt</item>
         <item>Zapis</item>
         <item>Wyszukaj</item>
     </string-array>
-    <string name="file_properties_permissions_set_mode_special">Specjalne</string>
-    <string-array name="file_properties_permissions_set_mode_special_mode_bits">
+    <string name="file_properties_permission_set_mode_special">Specjalne</string>
+    <string-array name="file_properties_permission_set_mode_special_mode_bits">
         <item>Ustaw UID</item>
         <item>Ustaw GID</item>
         <item>Sticky bit</item>
     </string-array>
-    <string name="file_properties_permissions_set_mode_uppercase_x">Nie dodawaj „Wykonaj” do załączonych plików</string>
-    <string name="file_properties_permissions_selinux_context">Kontekst SELinux</string>
-    <string name="file_properties_permissions_set_selinux_context_title">Zmień kontekst SELinux</string>
-    <string name="file_properties_permissions_set_selinux_context_restore">Przywróć</string>
-    <string name="file_properties_permissions_recursive">Zastosuj do załączonych plików</string>
+    <string name="file_properties_permission_set_mode_uppercase_x">Nie dodawaj „Wykonaj” do załączonych plików</string>
+    <string name="file_properties_permission_selinux_context">Kontekst SELinux</string>
+    <string name="file_properties_permission_set_selinux_context_title">Zmień kontekst SELinux</string>
+    <string name="file_properties_permission_set_selinux_context_restore">Przywróć</string>
+    <string name="file_properties_permission_recursive">Zastosuj do załączonych plików</string>
     <string name="file_properties_image">Obraz</string>
     <string name="file_properties_media_dimensions">Wymiary</string>
     <string name="file_properties_media_dimensions_format">%1$d \u00d7 %2$d</string>
