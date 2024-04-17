@@ -28,33 +28,16 @@ inline fun <T, R> Future<T>.map(
         override fun isDone(): Boolean = this@map.isDone
 
         @Throws(ExecutionException::class, InterruptedException::class)
-        override fun get(): R {
-            val result = try {
-                this@map.get()
-            } catch (e: Exception) {
-                val exception = try {
-                    transformException(e)
-                } catch (e2: Exception) {
-                    e2.addSuppressed(e)
-                    throw ExecutionException(e2)
-                }
-                check(
-                    exception is ExecutionException || exception is InterruptedException ||
-                        exception is TimeoutException
-                )
-                throw exception
-            }
-            try {
-                return transform(result)
-            } catch (e: Exception) {
-                throw ExecutionException(e)
-            }
-        }
+        override fun get(): R = transformGet { this@map.get() }
 
         @Throws(ExecutionException::class, InterruptedException::class, TimeoutException::class)
-        override fun get(timeout: Long, unit: TimeUnit): R {
+        override fun get(timeout: Long, unit: TimeUnit): R =
+            transformGet { this@map.get(timeout, unit) }
+
+        @Throws(ExecutionException::class, InterruptedException::class, TimeoutException::class)
+        private inline fun transformGet(get: () -> T): R {
             val result = try {
-                this@map.get(timeout, unit)
+                get()
             } catch (e: Exception) {
                 val exception = try {
                     transformException(e)
