@@ -340,12 +340,6 @@
     <string name="file_properties_permission_set_selinux_context_title">變更 SELinux 上下文</string>
     <string name="file_properties_permission_set_selinux_context_restore">還原</string>
     <string name="file_properties_permission_recursive">套用到包含的檔案</string>
-    <string name="file_properties_checksum">總和檢查碼</string>
-    <string name="file_properties_checksum_compare">比較</string>
-    <string name="file_properties_checksum_compare_placeholder">任何總和檢查碼</string>
-    <string name="file_properties_checksum_compare_match_format">與 %1$s 總和檢查碼相符</string>
-    <string name="file_properties_checksum_compare_prefix_match_format">與 %1$s 總和檢查碼的前綴相符</string>
-    <string name="file_properties_checksum_compare_no_match">找不到相符的總和檢查碼</string>
     <string name="file_properties_image">圖片</string>
     <string name="file_properties_media_dimensions">尺寸</string>
     <string name="file_properties_media_dimensions_format">%1$d \u00d7 %2$d</string>
@@ -399,6 +393,12 @@
     <string name="file_properties_apk_signature_digests">簽名</string>
     <string name="file_properties_apk_signature_digests_empty">無有效簽名</string>
     <string name="file_properties_apk_past_signature_digests">舊簽名</string>
+    <string name="file_properties_checksum">總和檢查碼</string>
+    <string name="file_properties_checksum_compare">比較</string>
+    <string name="file_properties_checksum_compare_placeholder">任何總和檢查碼</string>
+    <string name="file_properties_checksum_compare_match_format">與 %1$s 總和檢查碼相符</string>
+    <string name="file_properties_checksum_compare_prefix_match_format">與 %1$s 總和檢查碼的前綴相符</string>
+    <string name="file_properties_checksum_compare_no_match">找不到相符的總和檢查碼</string>
 
     <string name="storage_file_system_root_title">根目錄</string>
     <string name="storage_list_title">儲存空間</string>
@@ -412,10 +412,11 @@
     <string name="storage_edit_device_storage_title">編輯裝置儲存空間</string>
     <string name="storage_edit_device_storage_name">名稱</string>
     <string name="storage_edit_device_storage_path">路徑</string>
-    <string name="storage_add_document_manager_shortcut_title">新增 DocumentsUI 捷徑</string>
-    <string name="storage_edit_document_manager_shortcut_title">編輯 DocumentsUI 捷徑</string>
-    <string name="storage_edit_document_manager_shortcut_uri_error_empty">輸入 URI</string>
-    <string name="storage_edit_document_manager_shortcut_uri_error_invalid">無效的 URI</string>
+    <string name="storage_add_external_storage_shortcut_title">新增外部儲存空間捷徑</string>
+    <string name="storage_edit_external_storage_shortcut_title">編輯外部儲存空間捷徑</string>
+    <string name="storage_edit_external_storage_shortcut_root_id">儲存空間</string>
+    <string name="storage_edit_external_storage_shortcut_root_id_error_empty">輸入儲存空間</string>
+    <string name="storage_edit_external_storage_shortcut_path">路徑</string>
     <string name="storage_add_document_tree_title">新增外部儲存空間</string>
     <string name="storage_edit_document_tree_title">編輯外部儲存空間</string>
     <string name="storage_edit_document_tree_name">名稱</string>
